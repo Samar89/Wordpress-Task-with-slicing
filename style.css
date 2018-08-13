@@ -187,7 +187,7 @@ header .form-inline input.search {
   overflow: hidden;
 }
 .EgyptNews .SliderNews .carousel-inner .col-lg-3 img {
-  min-height: 180px;
+  height: 200px;
   width: 100%;
 }
 .EgyptNews .SliderNews .carousel-inner .col-lg-3 .title {
