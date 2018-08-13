@@ -1,0 +1,311 @@
+$main-color:#1d1d1d;
+
+$second-color:#ca252b;
+
+$text-color:#fff;
+
+$bg-hover : rgba(0 ,0,0,0.5);
+
+$main-font : 'Tahoma','verdana','serif';
+
+$second-font:'Times New Roman','Times','serif';
+
+
+body{
+    font-family: $main-font;
+}
+a:hover{
+    text-decoration: none !important;
+}
+/* Start Header Style */
+header{
+    border-bottom: 2px solid $main-color;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    .FirstHeader{
+        padding : 10px;
+        img{
+            width:100%;
+        }
+    }
+    
+    .navbar{
+        background: $main-color;
+        font-family: $second-font;
+        
+        li{
+            a.nav-link{
+                color:$text-color !important;
+            }
+        }
+        li:hover{
+            background: $second-color;
+            border-radius: 2px;
+        }
+    }
+    
+    .form-inline {
+        direction: rtl;
+        float: left;
+        
+        .btn{
+            font-size: 15px;
+            position: absolute;
+            background: transparent;
+            color : $second-color;
+        }
+        
+        input.search{
+            direction: ltr;
+            border : 0;
+            padding: 5px;
+        }
+    }
+}
+/* End Header Style */
+
+/* Start Side Banner Style */
+.SideBanner{
+    position: absolute;
+    overflow: hidden;
+    width : 120px;
+    height: 500px;
+    margin-left: -110px;
+    img{
+        width: 100%;
+    }
+}
+@media only screen and (max-width : 600px){
+    .SideBanner {
+        opacity: 0;
+    }
+}
+/* End Side Banner Style */
+
+// Post Title Style 
+@mixin PostTitle{
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+    width: 100%;
+    color:$text-color;
+    padding: 10px;
+    background: linear-gradient(to top , black , transparent);
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+/* Start Main Post Section Style */
+.MainPosts {
+    border-bottom: 2px solid $main-color;
+    padding-bottom: 10px;
+
+    .SmallPost , .BigPost{
+        position: relative;
+        img{
+            height: 100%;
+        }
+    }
+    .OnePost{
+        overflow: hidden;
+        padding-right: 0px;
+    }
+    .TwoPost{
+        overflow: hidden;
+        padding-right: 0px;
+        .PostInfo{
+            width: 100%;
+        }
+    }
+    img{
+        width: 100%;
+    }
+    :first-child .SmallPost{
+        margin-bottom: 5px;
+    }
+    .BigPost{
+        .PostInfo a.title{
+            font-size: 22px;
+        }
+        img{
+            min-height: 360px;
+        }
+    }
+    .PostInfo{
+        @include PostTitle;
+        a{
+            color:$text-color;
+        }
+        p{
+            padding: 5px;
+            border-radius: 2px;
+            display: inline;
+        }
+        .local{
+            background: $second-color;
+        }
+        .world{
+            background: #0373bc;
+        }
+    }
+    .SquareBanner{
+        padding : 25px;
+        img{
+            width: 100%;
+        }
+        @media only screen and (max-width : 991px){
+            img{
+                width:50%;
+            }
+        }
+    }
+     @media only screen and (max-width : 768px){
+         .SmallPost , .BigPost{
+             margin-bottom: 20px;
+             padding: 0;
+         }
+    }
+}
+/* Start Title Of Section Style */ 
+.SectionTitle{
+    color: $second-color;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: $second-font;
+    text-transform: uppercase;
+}
+.SectionTitle:hover{
+    color:$main-color;
+}
+/* End Title Of Section Style */
+
+/* Start Egypt News Slider Style */
+.EgyptNews{
+    padding-top: 5px;
+    .SliderNews{
+        overflow: hidden;
+        .carousel-inner {
+            .active, .carousel-item-next, .carousel-item-prev {
+                display: flex;
+            }
+            .carousel-item-right.active, .carousel-item-next {
+               transform: translateX(25%);
+            }
+            .carousel-item-left.active,  .carousel-item-prev {
+              transform: translateX(-25%);
+            }
+            .carousel-item-right, .carousel-item-left{ 
+              transform: translateX(0);
+
+            }
+            .col-lg-3{
+                padding: 1px;
+                overflow: hidden;
+                img{
+                    min-height: 180px;
+                    width: 100%;
+                }
+                .title{
+                    @include PostTitle;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            } 
+        }
+        .carousel-control-next, .carousel-control-prev{
+            background: $second-color;
+            opacity: 1;
+            top:40%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        .carousel-control-next{
+            margin-right:-20px;
+            span{
+                margin-right: 18px;
+            }
+        }
+        .carousel-control-prev{
+            margin-left:-20px;
+            span{
+                margin-left: 18px;
+            }
+        }
+    }
+}
+/* End Egypt News Slider Style */
+
+// Feature And Top Stories Sections Style
+@mixin DivStyle {
+    border-top: 2px solid #1d1d1d;
+    margin-top: 20px;
+    padding: 5px 0 0;
+}
+/* Start Feature Section Style */
+.Feature-And-SideBar{
+    .row{
+        margin-right: 0;
+        .col-md-8{
+            padding-right: 0;
+        }
+    }
+}
+.feature{
+    @include DivStyle;
+    overflow: hidden;
+    .col-md-6{
+        padding-right: 1px;
+        overflow: hidden;
+        .FeaturePost{
+            img{
+                width: 100%;
+                height: 220px;
+            }
+            .title{
+                @include PostTitle;
+            }
+        }
+    }
+    @media only screen and (max-width : 768px){
+        .col-12{
+            margin-bottom: 20px;
+        }
+    }
+}
+/* End Feature Section Style */
+
+/* Start SideBar Style */
+.sidebar{
+    .TopStories{
+        @include DivStyle;
+        ul{
+            padding: 5px;
+            li{
+                list-style: none;
+                min-height: 40px;
+                padding:10px;
+                margin-bottom: 5px;
+                border:1px solid #ccc;
+                a{
+                    color:$main-color;
+                    padding-left: 5px;
+                }
+                span{
+                    color:$text-color;
+                    background: $second-color;
+                    padding: 2px 7px;
+                }
+                a:hover{
+                  background : transparent;
+                }
+            }
+            :hover{
+                    background: #eee;
+                    span{
+                        background: $second-color;
+                    }
+                }
+        }
+    }
+}
+/* End SideBar Style */

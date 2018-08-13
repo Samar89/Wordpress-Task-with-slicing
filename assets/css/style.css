@@ -1,0 +1,274 @@
+body {
+  font-family: "Tahoma", "verdana", "serif";
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Start Header Style */
+header {
+  border-bottom: 2px solid #1d1d1d;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+header .FirstHeader {
+  padding: 10px;
+}
+header .FirstHeader img {
+  width: 100%;
+}
+header .navbar {
+  background: #1d1d1d;
+  font-family: "Times New Roman", "Times", "serif";
+}
+header .navbar li a.nav-link {
+  color: #fff !important;
+}
+header .navbar li:hover {
+  background: #ca252b;
+  border-radius: 2px;
+}
+header .form-inline {
+  direction: rtl;
+  float: left;
+}
+header .form-inline .btn {
+  font-size: 15px;
+  position: absolute;
+  background: transparent;
+  color: #ca252b;
+}
+header .form-inline input.search {
+  direction: ltr;
+  border: 0;
+  padding: 5px;
+}
+
+/* End Header Style */
+/* Start Side Banner Style */
+.SideBanner {
+  position: absolute;
+  overflow: hidden;
+  width: 120px;
+  height: 500px;
+  margin-left: -125px;
+}
+.SideBanner img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .SideBanner {
+    opacity: 0;
+  }
+}
+/* End Side Banner Style */
+/* Start Main Post Section Style */
+.MainPosts {
+  border-bottom: 2px solid #1d1d1d;
+}
+.MainPosts .SmallPost, .MainPosts .BigPost {
+  position: relative;
+}
+.MainPosts .SmallPost img, .MainPosts .BigPost img {
+  height: 100%;
+}
+.MainPosts .OnePost {
+  overflow: hidden;
+  padding-right: 0px;
+}
+.MainPosts .TwoPost {
+  overflow: hidden;
+  padding-right: 0px;
+}
+.MainPosts .TwoPost .PostInfo {
+  width: 100%;
+}
+.MainPosts img {
+  width: 100%;
+}
+.MainPosts :first-child .SmallPost {
+  margin-bottom: 5px;
+}
+.MainPosts .BigPost .PostInfo a.title {
+  font-size: 22px;
+}
+.MainPosts .PostInfo {
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+  color: #fff;
+  padding: 5px;
+  background: linear-gradient(to top, black, transparent);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+.MainPosts .PostInfo a {
+  color: #fff;
+  padding: 5px;
+  border-radius: 2px;
+}
+.MainPosts .PostInfo .local {
+  background: #ca252b;
+}
+.MainPosts .PostInfo .world {
+  background: #0373bc;
+}
+.MainPosts .SquareBanner {
+  padding: 25px;
+}
+.MainPosts .SquareBanner img {
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .MainPosts .SquareBanner img {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .MainPosts .SmallPost, .MainPosts .BigPost {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+}
+
+/* Start Title Of Section Style */
+.SectionTitle {
+  color: #ca252b;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Times New Roman", "Times", "serif";
+  text-transform: uppercase;
+}
+
+/* End Title Of Section Style */
+/* Start Egypt News Slider Style */
+.EgyptNews {
+  padding-top: 5px;
+}
+.EgyptNews .SliderNews {
+  overflow: hidden;
+}
+.EgyptNews .SliderNews .carousel-inner .active, .EgyptNews .SliderNews .carousel-inner .carousel-item-next, .EgyptNews .SliderNews .carousel-inner .carousel-item-prev {
+  display: flex;
+}
+.EgyptNews .SliderNews .carousel-inner .carousel-item-right.active, .EgyptNews .SliderNews .carousel-inner .carousel-item-next {
+  transform: translateX(25%);
+}
+.EgyptNews .SliderNews .carousel-inner .carousel-item-left.active, .EgyptNews .SliderNews .carousel-inner .carousel-item-prev {
+  transform: translateX(-25%);
+}
+.EgyptNews .SliderNews .carousel-inner .carousel-item-right, .EgyptNews .SliderNews .carousel-inner .carousel-item-left {
+  transform: translateX(0);
+}
+.EgyptNews .SliderNews .carousel-inner .col-lg-3 {
+  padding: 1px;
+}
+.EgyptNews .SliderNews .carousel-inner .col-lg-3 img {
+  min-height: 180px;
+  width: 100%;
+}
+.EgyptNews .SliderNews .carousel-inner .col-lg-3 .title {
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+  color: #fff;
+  padding: 5px;
+  background: linear-gradient(to top, black, transparent);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  font-size: 14px;
+  font-weight: 600;
+}
+.EgyptNews .SliderNews .carousel-control-next, .EgyptNews .SliderNews .carousel-control-prev {
+  background: #ca252b;
+  opacity: 1;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.EgyptNews .SliderNews .carousel-control-next {
+  margin-right: -20px;
+}
+.EgyptNews .SliderNews .carousel-control-next span {
+  margin-right: 18px;
+}
+.EgyptNews .SliderNews .carousel-control-prev {
+  margin-left: -20px;
+}
+.EgyptNews .SliderNews .carousel-control-prev span {
+  margin-left: 18px;
+}
+
+/* End Egypt News Slider Style */
+/* Start Feature Section Style */
+.Feature-And-SideBar .row {
+  margin-right: 0;
+}
+.Feature-And-SideBar .row .col-md-8 {
+  padding-right: 0;
+}
+
+.feature {
+  border-top: 2px solid #1d1d1d;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 5px 0 0;
+  overflow: hidden;
+}
+.feature .col-md-6 {
+  padding-right: 1px;
+}
+.feature .col-md-6 .FeaturePost img {
+  width: 100%;
+}
+.feature .col-md-6 .FeaturePost .title {
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+  color: #fff;
+  padding: 5px;
+  background: linear-gradient(to top, black, transparent);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+@media only screen and (max-width: 768px) {
+  .feature .col-12 {
+    margin-bottom: 20px;
+  }
+}
+
+/* End Feature Section Style */
+/* Start SideBar Style */
+.sidebar .TopStories {
+  border-top: 2px solid #1d1d1d;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 5px 0 0;
+}
+.sidebar .TopStories ul {
+  padding: 5px;
+}
+.sidebar .TopStories ul li {
+  list-style: none;
+  min-height: 40px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+}
+.sidebar .TopStories ul li a {
+  color: #1d1d1d;
+  padding-left: 5px;
+}
+.sidebar .TopStories ul li span {
+  color: #fff;
+  background: #ca252b;
+  padding: 5px 7px;
+}
+.sidebar .TopStories ul :hover {
+  background: #eee;
+}
+
+/* End SideBar Style */
